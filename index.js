@@ -22,7 +22,7 @@
     borderRadius:{number}   矩形框圆角半径 , 默认0
 };
  */
-function text2image(params) {
+function css2img(params) {
 
     var canvas = document.createElement("canvas"),
         context = canvas.getContext('2d'),
@@ -265,4 +265,4 @@ function text2image(params) {
     return canvas.toDataURL("image/png");
 }
 
-export default text2image;
+export default css2img;
