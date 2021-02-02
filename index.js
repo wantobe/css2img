@@ -1,7 +1,7 @@
 /**
- * 将文字生成图片，返回该图片的base64 DataUrl
+ * 将文字生成图片
  *
- * @param {object} args[1]  文字内容/样式等属性，参考css的写法，单词要用驼峰格式，目前支持如下：
+ * @param {object}  文字内容/样式等属性，参考css的写法，单词要用驼峰格式，目前支持如下：
  {
     text:{string},          单行文字
     p:{string},             段落文字(用换行\n)
@@ -21,6 +21,8 @@
     borderBottom:{string}   同border
     borderRadius:{number}   矩形框圆角半径 , 默认0
 };
+ *
+ * @returns {string}  返回该图片的base64 DataUrl
  */
 function css2img(params) {
 
@@ -265,4 +267,4 @@ function css2img(params) {
     return canvas.toDataURL("image/png");
 }
 
-export default css2img;
+module.exports.css2img = css2img;
